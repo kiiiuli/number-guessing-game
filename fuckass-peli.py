@@ -2,23 +2,25 @@ import random
 
 
 def play_game():
-    number = random.randint(1, 10)
-    guesses = []  # alottaa uude lista joka runi
-    print("\nUusi kierros alotettu! \nEn tiiä mite tä history pystyy clearaa lol\n")
+    numero = random.randint(1, 10)
+    arvaukset = []  # näyttää aikasemman kierroksen yritykset
+    print("\nUusi kierros alotettu! \ntätä ei vissii pysty clearaa\n")
     while True:
         try:
-            guess = int(input("arvaa numero 1-10: "))
+            arvus = int(
+                input("arvaa numero 1-10: ")
+            )  # guess on pelaajan arvaama numero
         except ValueError:
             print("ooks vittu dena?")
             continue
 
-        guesses.append(guess)
+        arvaukset.append(arvus)
 
-        if guess == number:
+        if arvus == numero:
             print("🎉 Gz @@@@@@@!")
-            print(f"arvasit täl kierrokssel: {guesses}\n")
+            print(f"arvasit täl kierrokssel: {arvaukset}\n")
             break
-        elif guess < number:
+        elif arvus < numero:
             print("💀 liia pieni, yritä uusiks\n")
         else:
             print("💀 liia iso, yritä uusiks\n")
@@ -26,7 +28,7 @@ def play_game():
 
 if __name__ == "__main__":
     while True:
-        play_game()  # alottaa pelin uudelleen
+        play_game()
         replay = input("pelaa uusiks? (y/n): ").strip().lower()
         if replay != "y":
             print("kiitti vitust pelaamisest!")
