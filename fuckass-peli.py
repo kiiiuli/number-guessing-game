@@ -4,7 +4,9 @@ import random
 def play_game():
     numero = random.randint(1, 10)
     arvaukset = []  # näyttää aikasemman kierroksen yritykset
-    print("\nUusi kierros alotettu! \ntätä ei vissii pysty clearaa\n")
+    print(
+        "\nUusi kierros alotettu!               by:kiiiuli \ntätä ei vissii pysty clearaa\n"
+    )
     while True:
         try:
             arvus = int(
