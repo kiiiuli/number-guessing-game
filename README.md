@@ -10,4 +10,4 @@ Make sure you have Python 3.13 installed.
 
 Place all the files (the .py file, images, etc.) in the same folder.
 
-Double-click the .py file to run the game.
+Double-click the launch.py file to run the game.
